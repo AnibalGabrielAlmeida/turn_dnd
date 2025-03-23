@@ -13,19 +13,19 @@ body {
 
 /* Título */
 .page-tittle {
-    margin-bottom: 30px;
+    margin-bottom: 2vh;
+    font-size: 2vw;
 }
 
 /* Estilo del contenedor de personajes */
 #personajes {
     width: 50%;
-    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
     margin-bottom: 20px;
-    height: 320px;
+    height: 50vh;
     overflow-y: auto;
     scroll-behavior: smooth;
     list-style-type: none;
@@ -66,9 +66,9 @@ body {
 }
 
 .botones-acciones button {
-    width: 100px; /* Ancho fijo de 100px */
-    height: 80px; /* Altura constante para todos los botones */
-    font-size: 18px; /* Tamaño de la fuente */
+    width: 8vw; /* Ancho fijo de 100px */
+    height: 10vh; /* Altura constante para todos los botones */
+    font-size: 1.5vw; /* Tamaño de la fuente */
     text-align: center; /* Centra el texto horizontalmente */
     line-height: 30px; /* Centra el texto verticalmente */
     margin-top: 20px;
@@ -88,65 +88,71 @@ body {
 }
 
 
-/* Estilos para la carta del personaje */
-#cartaPersonaje {
-    display: none; /* Inicialmente oculta */
-    width: 40vw;
-    height: 80vh;
-    padding: 20px;
-    background-color: #f9f3e3; /* Fondo beige claro */
-    border: 2px solid #d1c1a1; /* Borde sutil beige */
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-top: 20px;
-    position: absolute;
-    top: 50px;
-    right: 10vw; /* Coloca la carta a la derecha */
-    font-family: 'Arial', sans-serif; /* Fuente más legible */
-    overflow: hidden;
-}
 
-
-/* Título de la carta */
-#cartaPersonaje h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-}
-
-/* Contenido de la carta */
-#cartaPersonaje p {
-    margin: 5px 0;
-    color: #555;
-    font-size: 14px;
-}
 
 /* Estilo para la caja de la carta (caja amarilla) */
 .cartaBox {
-    background-color: #d1b78a; /* Fondo beige claro para la caja */
+    background-color: #b6966c; /* Fondo beige claro para la caja */
     border-radius: 8px;
-    padding: 20px;
+    padding: 50px 10px 10px 10px;
+    width: 40vw;
+    height: 80vh;
     text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    border: 8px solid #d1b78a; /* Bordes de color más oscuro, similar al estilo de cartas */
-    width: 90%; /* Tamaño de la caja */
-    height: 88%; /* Tamaño de la caja */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 2px solid #333; /* Bordes de color más oscuro, similar al estilo de cartas */
+    position:absolute;
+    top: 8vh;right: 10vw; /* Coloca la carta a la derecha */
+    font-family: 'Arial', sans-serif; /* Fuente más legible */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
+
 /* Estilo para la imagen */
-#cartaPersonaje img {
+#cartaBox img {
     width: 100%; /* La imagen se ajusta al 100% del ancho del contenedor */
     height: auto; /* Mantiene la relación de aspecto */
     object-fit: cover; /* Hace que la imagen cubra el área sin distorsionarse */
     border-radius: 10px; /* Añade bordes redondeados a la imagen */
+    border: 20px solid #2c3e50 ;
+    margin-top: 10px;
 }
+
+/* Estilo para el contenedor de texto */
+.texto {
+    background-color: #d8c29c; /* Fondo oscuro semitransparente */
+    color: #000000; /* Color del texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #333;
+    padding: 10px;
+    width: 92%;
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    flex-direction: row; /* Los elementos estarán en fila */
+    align-items: center; /* Alineamos verticalmente los elementos */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    width: 36vw;
+    height: 3vh;
+
+}
+.nombreCarta {
+    margin-right: auto;
+    margin-left: 16px;
+    font-size: 1.8vw;
+    font-weight: bold; /* Aumenta la presencia del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.estadoCarta {
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 1.4vw;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+}
+
+
 
 /* Contenedor de botones dentro de la carta (como acciones del personaje) */
 #acciones {

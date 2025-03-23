@@ -238,7 +238,7 @@ function smoothScrollToPersonaje(contenedor, personaje) {
     const target = personaje.offsetTop - contenedor.offsetTop;
 
     // Duración del desplazamiento en milisegundos
-    const duration = 500; // 500ms
+    const duration = 250; // 500ms
     let startTime = null;
 
     // Función que se ejecuta para realizar el desplazamiento suave
@@ -273,15 +273,6 @@ function easeInOutQuad(t, b, c, d) {
     return -c / 2 * (t * (t - 2) - 1) + b;
 }
 
-
-
-
-
-
-
-
-
-
 function mostrarCarta(personaje) {
     const carta = document.getElementById('cartaPersonaje');
     carta.style.display = 'block'; // Mostrar la carta
@@ -291,10 +282,14 @@ function mostrarCarta(personaje) {
 
     carta.innerHTML = `
         <div class="cartaBox">
-            <img src="${personaje.imagen_url}" alt="${personaje.nombre}" style="width: 34vw; height: 70vh; border-radius: 10px;" />
-            <h3>${personaje.nombre}</h3>
-            <p>HP: ${personaje.hp}</p>
-            <p>Estado: ${personaje.estado}</p>
+            <div class="imagenContainer">
+                <img src="${personaje.imagen_url}" alt="${personaje.nombre}" style="width: 36vw; height: 74vh; border-radius: 10px; border: 2.5px solid #000" />
+            </div>
+            <div class="texto">
+                <h3 class="nombreCarta">${personaje.nombre}</h3>
+                <p class="estadoCarta">HP: ${personaje.hp}</p>
+                <p class="estadoCarta">Estado: ${personaje.estado}</p>
+            </div>
         </div>
     `;
 }

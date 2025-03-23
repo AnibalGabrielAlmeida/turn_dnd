@@ -43,7 +43,7 @@ def crear_base_de_datos():
         ('Drusilla', 9, 9, 0, 18, 'Bruja','images/isa.jpg'),
         ('Ramiel undav', 7, 7, 0, 15, 'Brujo','images/tortu.jpg'),
         ('Yuuki Phantom', 11, 11, 0, 14, 'Druida','images/emily.jpg'),
-        ('Althia', 9, 9, 0, 20, 'Picara','images/maca.jpg'),
+        ('Althia', 9, 9, 0, 20, 'Picara','images/maca.png'),
         ('Tito Calderstone', 4, 4, 0, 11, 'Bardo','images/fer.jpg')
     ]
     
