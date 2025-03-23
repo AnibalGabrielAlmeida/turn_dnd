@@ -1,0 +1,270 @@
+/* Estilos básicos para la página */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Título */
+.page-tittle {
+    margin-bottom: 30px;
+}
+
+/* Estilo del contenedor de personajes */
+#personajes {
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 320px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    list-style-type: none;
+}
+
+/* Estilo general para los personajes */
+.personaje {
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
+    list-style-type: none;
+    user-select: none;
+}
+
+/* Estilo cuando es el turno del jugador */
+.turno {
+    transform: scale(1.1);
+    background-color: #d1b78a;
+    box-shadow: 0 0 10px rgba(255, 255, 198, 0.788);
+}
+
+/* Ocultar la barra de scroll */
+#personajes::-webkit-scrollbar {
+    width: 0px; /* Ocultamos la barra de desplazamiento */
+    background: transparent; /* Hacemos que el fondo sea transparente */
+}
+
+.botones-acciones {
+    display: flex;
+    justify-content: space-between; /* Alinea los botones en línea */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.botones-acciones button {
+    width: 100px; /* Ancho fijo de 100px */
+    height: 80px; /* Altura constante para todos los botones */
+    font-size: 18px; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 30px; /* Centra el texto verticalmente */
+    margin-top: 20px;
+    padding: 0; /* Elimina padding para evitar aumento en tamaño */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f0e1c1; /* Color de fondo beige */
+    color: #333; /* Color del texto */
+    border: 1px solid #d1c1a1; /* Borde sutil */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición para hover */
+}
+
+.botones-acciones button:hover {
+    background-color: #d1b78a; /* Cambio de color en hover */
+    transform: scale(1.05); /* Agranda el botón un poco al hacer hover */
+}
+
+
+/* Estilos para la carta del personaje */
+#cartaPersonaje {
+    display: none; /* Inicialmente oculta */
+    width: 40vw;
+    height: 80vh;
+    padding: 20px;
+    background-color: #f9f3e3; /* Fondo beige claro */
+    border: 2px solid #d1c1a1; /* Borde sutil beige */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px;
+    position: absolute;
+    top: 50px;
+    right: 10vw; /* Coloca la carta a la derecha */
+    font-family: 'Arial', sans-serif; /* Fuente más legible */
+    overflow: hidden;
+}
+
+
+/* Título de la carta */
+#cartaPersonaje h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Contenido de la carta */
+#cartaPersonaje p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Estilo para la caja de la carta (caja amarilla) */
+.cartaBox {
+    background-color: #d1b78a; /* Fondo beige claro para la caja */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 8px solid #d1b78a; /* Bordes de color más oscuro, similar al estilo de cartas */
+    width: 90%; /* Tamaño de la caja */
+    height: 88%; /* Tamaño de la caja */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Estilo para la imagen */
+#cartaPersonaje img {
+    width: 100%; /* La imagen se ajusta al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Hace que la imagen cubra el área sin distorsionarse */
+    border-radius: 10px; /* Añade bordes redondeados a la imagen */
+}
+
+/* Contenedor de botones dentro de la carta (como acciones del personaje) */
+#acciones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Campo de daño y efectos */
+#campoDeDanio, #campoEfectos {
+    margin-top: 10px;
+}
+
+/* Estilos básicos para el acordeón */
+.acordeon {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.enemigos {
+    width: 430px;
+    background-color: hsl(44, 59%, 79%);
+    color: black;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.enemigos:hover {
+    background-color: #d1b78a;
+}
+
+/* Lista de enemigos, oculta inicialmente */
+.enemigos-lista {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Estilo para cada enemigo */
+.enemigo {
+    background-color: #f9f9f9;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
+.formulario-accion {
+    background-color: #d1b78a; /* Fondo beige claro */
+    border-radius: 8px;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 8px solid #b6966c; /* Un tono más oscuro para los bordes */
+    width: 90%; /* Ajuste del tamaño */
+    max-width: 375px; /* Para evitar que se agrande demasiado en pantallas grandes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-accion {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Estilo para los inputs y selects */
+.formulario-accion input{
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b6966c;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff; /* Fondo blanco para contraste */
+}
+.formulario-accion label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.formulario-accion select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #b6966c;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff; /* Fondo blanco para contraste */
+}
+
+/* Botón dentro del formulario */
+.formulario-accion button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #a07c50; /* Marrón oscuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario-accion button:hover {
+    background-color: #8c6a42;
+    transform: scale(1.05);
+}
+
