@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Turnos D&D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="page-tittle">TURNOS D&D</h1>
+
+    <!-- Contenedor de personajes -->
+    <div id="personajes">
+        <ul id="personajes-lista">
+            <!-- Aquí se llenarán los personajes dinámicamente -->
+        </ul>
+    </div>
+
+    <div id="cartaPersonaje"></div>
+
+
+<!-- Contenedor para el menú desplegable -->
+<div class="acordeon">
+    <button class="enemigos" onclick="toggleEnemigos()">Enemigos</button>
+    <div id="enemigos-lista" class="enemigos-lista">
+        <!-- Aquí se cargarán los enemigos dinámicamente -->
+    </div>
+</div>
+
+
+    <!-- Botones de acciones -->
+    <div class="botones-acciones">
+        <button id="siguienteTurno">Siguiente Turno</button>
+        <button id="atacar" style="display:none;">Atacar</button>  <!-- Botón Atacar -->
+        <button id="curar" style="display:none;">Curar</button> <!-- Botón Curar -->
+        <button id="estadoAlterado" style="display:none;">Estado Alterado</button> <!-- Botón Alterado -->
+    </div>
+    
+    <div class="formulario-accion">
+
+            <!-- Mensaje cuando no hay acción seleccionada -->
+        <div id="mensajeAccion" class="titulo-accion" >
+            Por favor, selecciona una acción para continuar.
+        </div>
+        <!-- Formulario de Ataque -->
+        <div id="formularioAtaque" style="display:none;">
+            <label for="objetivo">Selecciona un objetivo:</label>
+            <select id="objetivo"></select>
+            
+            <label for="daño">Daño:</label>
+            <input type="number" id="daño" min="0" placeholder="Ingresa el daño">
+            
+            <button id="confirmarAtaque">Confirmar</button>
+        </div>
+
+        <!-- Formulario de Curación -->
+        <div id="formularioCurar" style="display:none;">
+            <label for="curarObjetivo">Selecciona un objetivo para curar:</label>
+            <select id="curarObjetivo"></select>
+            
+            <label for="cantidadCuracion">Cantidad de Curación:</label>
+            <input type="number" id="cantidadCuracion" min="0" placeholder="Ingresa la cantidad de curación">
+            
+            <button id="confirmarCuracion">Confirmar Curación</button>
+        </div>
+
+        <!-- Formulario de Estado Alterado -->
+        <div id="formularioEstado" style="display:none;">
+            <label for="estadoObjetivo">Selecciona un objetivo para aplicar un estado:</label>
+            <select id="estadoObjetivo"></select>
+            
+            <label for="estado">Selecciona el estado:</label>
+            <select id="estado">
+                <option value="normal">Normal</option>
+                <option value="veneno">Veneno</option>
+                <option value="paralizado">Paralizado</option>
+                <option value="grapled">Grapled</option>
+                <option value="stunned">Stunned</option>
+                <option value="cegado">Cegado</option>    
+                <option value="encantado">Encantado</option>
+                <option value="atado">Atado</option>
+                <option value="asustado">Asustado</option>
+                <option value="petrificado">Petrificado</option>
+                <option value="sordo">Sordo</option>
+            </select>
+            
+            <button id="confirmarEstado">Confirmar Estado</button>
+        </div>
+    </div>
+
+    <div id="notificaciones" style="margin-top: 20px;"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
